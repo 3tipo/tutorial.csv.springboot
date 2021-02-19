@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header"></header>
+	<!-- ======= Hero Section ======= -->
+  <section id="hero" style="background-color: aqua;" class="d-flex align-items-center">
+    
+    <div class="card bg-light" style="width: 33%;left: 10%;" data-aos="zoom-out"  data-aos-delay="100">
+      <div class="card-header">
+       Extrato de Taxa    
+      </div>
+      <div class="card-body">
+        <table class="table-responsive table-sm table-striped">
+					<thead class="thead-dark">
+						<tr>
+							<th>ValorDaTaxa(AKZ)</th>
+							<th>ValorPago(AKZ)</th>
+							<th>MêsPago</th>
+							<th>DataLimite</th>
+							<th>Recibo</th>
+							<th>Divida(AKZ)</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr th:each="taxa: ${listtaxas}">
+							<td th:text="${taxa.valortaxa}"></td>
+							<td th:text="${taxa.valortaxapago}"></td>
+							<td th:text="${taxa.mespagamentotaxa}"></td>
+							<td th:text="${taxa.datalimitetaxa}"></td>
+							<td th:text="${taxa.reciboPagamentotaxa}"></td>
+							<td th:text="${taxa.valortaxadivida}"></td>
+						</tr>
+					</tbody>
+			</table>
+      </div>
+      <div class="card-footer"> 
+      <span th:text="'Membro:'+''+${titulo}"></span>  
+      </div>
+    </div>
+    <div class="card bg-light" style="width: 33%;left: 20%;" data-aos="zoom-out"  data-aos-delay="100">
+      <div class="card-header">
+       Extrato de Quota    
+      </div>
+      <div class="card-body">
+        <table class="table-responsive table-sm table-striped">
+					<thead class="thead-dark">
+						<tr>
+							<th>ValorDaQuota(AKZ)</th>
+							<th>ValorPago(AKZ)</th>
+							<th>MêsPago</th>
+							<th>DataLimite</th>
+							<th>Recibo</th>
+							<th>Divida(AKZ)</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr th:each="quota: ${listquotas}">
+							<td th:text="${quota.valorcota}"></td>
+							<td th:text="${quota.valorcotapago}"></td>
+							<td th:text="${quota.mespagamento}"></td>
+							<td th:text="${quota.datalimitequota}"></td>
+							<td th:text="${quota.reciboPagamento}"></td>
+							<td th:text="${quota.valorcotadivida}"></td>
+						</tr>
+					</tbody>
+			</table>
+      </div>
+      <div class="card-footer"> 
+      <span th:text="'Membro:'+''+${titulo}"></span>  
+      </div>
+    </div>
+  </section>
+    <!-- End Hero -->
+	
+	<footer th:replace="layout/layout :: footer"></footer>
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--  <div id="tabela" class="container py-4">
+		<div class="card bg-light">
+			<div class="card-header" style="background-color: #dcd0ac;" th:text="'EXTRATO DE TAXAS DO MEMBRO: '+${titulo}" >
+			</div>
+			<div class="card-body">
+			TOTAL DE TAXA:<span th:text="${totaltaxa}+'AKZ'"></span>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Valor da Taxa(AKZ)</th>
+							<th>Valor Pago(AKZ)</th>
+							<th>M�s Pago</th>
+							<th>Data Limite</th>
+							<th>Recibo</th>
+							<th>Divida(AKZ)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="taxa: ${listtaxas}">
+							<td th:text="${taxa.valortaxa}"></td>
+							<td th:text="${taxa.valortaxapago}"></td>
+							<td th:text="${taxa.mespagamentotaxa}"></td>
+							<td th:text="${taxa.datalimitetaxa}"></td>
+							<td th:text="${taxa.reciboPagamentotaxa}"></td>
+							<td th:text="${taxa.valortaxadivida}"></td>
+						</tr>
+					</tbody>
+				</table> 
+			</div>
+		</div>
+	</div>
+	-->
+  <script th:src="@{assets/vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{assets/vendor/jquery.easing/jquery.easing.min.js}"></script>
+  <script th:src="@{assets/vendor/php-email-form/validate.js}"></script>
+  <script th:src="@{assets/vendor/owl.carousel/owl.carousel.min.js}"></script>
+  <script th:src="@{assets/vendor/waypoints/jquery.waypoints.min.js}"></script>
+  <script th:src="@{assets/vendor/counterup/counterup.min.js}"></script>
+  <script th:src="@{assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{assets/vendor/venobox/venobox.min.js}"></script>
+  <script th:src="@{assets/vendor/aos/aos.js}"></script>
+  <!-- Template Main JS File -->
+  <script th:src="@{assets/js/main.js}"></script>  
+</body>
+</html>

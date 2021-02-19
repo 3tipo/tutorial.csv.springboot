@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title th:text="'Spring Boot: MVC + Thymeleaf + Data JPA - ' + ${titulo}"></title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/jquery-ui.min.css}" />
+
+
+
+  <link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/icofont/icofont.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/owl.carousel/assets/owl.carousel.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/venobox/venobox.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/assets/css/style.css}" rel="stylesheet">
+
+
+  
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<header id="header" th:fragment="header" class="fixed-top">
+	<div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-10 d-flex align-items-center">
+          <h1 class="logo mr-auto"><a th:href="@{/login}">FININVEST<span>.</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+            <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a th:href="@{/home1}">Home</a></li>
+              <li class="active"><a th:href="@{/extratos}">Extratos</a></li>
+            </ul>
+          </nav><!-- .nav-menu -->
+          <a th:href="@{/login}" class="get-started-btn scrollto">sair</a>
+        </div>
+      </div>
+
+    </div>
+	<!--  	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" th:href="@{#}">Home<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{#}"></a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{#}"></a></li>
+					<li class="nav-item"><a class="nav-link" th:href="@{#}"></a></li>
+				</ul>
+			</div>
+		</nav>
+        <div class="alert alert-danger" th:if="${error != null}" th:text="${error}"></div>		
+		<div class="alert alert-success" th:if="${success != null}" th:text="${success}"></div>		 
+		-->
+		<div class="alert alert-danger" th:if="${error != null}" th:text="${error}"></div>		
+		<div class="alert alert-success" th:if="${success != null}" th:text="${success}"></div>
+	</header>
+	
+	<div class="container"></div>
+		<footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Fininvest<span>.</span></h3>
+            <p>
+              Provincia <br>
+              rua, NY 535022<br>
+              Cidade <br><br>
+              <strong>Telefone:</strong>+244 931722809<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Fininvest</span></strong>. Todos Direitos reservados
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a th:href="@{#}" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a th:href="@{#}" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a th:href="@{#}" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a th:href="@{#}" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a th:href="@{#}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+	<!-- 
+	<footer th:fragment="footer" class="container">
+		<hr />
+		<img th:src="@{/images/spring.png}" alt="Spring logo" />
+		<p>
+			Powered by <a href="https://projects.spring.io/spring-boot/">Spring
+				Boot</a> y <a href="http://www.thymeleaf.org">Thymeleaf</a>.
+		</p>
+		
+		
+		<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+		<script th:src="@{/js/popper.min.js}"></script>
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<script th:src="@{/js/jquery-ui.min.js}"></script>
+		
+	</footer>
+	-->
+</body>
+</html>
